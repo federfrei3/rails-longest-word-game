@@ -4,7 +4,8 @@ require 'json'
 class GamesController < ApplicationController
   def new
     # Idee -> random number 4 - 10 letters
-    grid = Array.new(10) { ('A'..'Z').to_a.sample }
+    digits = rand(5..10)
+    grid = Array.new(digits) { ('A'..'Z').to_a.sample }
     @letters = grid.join
   end
 
